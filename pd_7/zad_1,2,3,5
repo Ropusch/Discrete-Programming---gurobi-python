@@ -1,0 +1,107 @@
+#zadań 1, 2, 3 i 5 nie było sensu robić w gurobipy - prościej było w LPsolve
+
+/* zad_1
+max: sa+sb+sc+sd;
+
+sa<=120;
+sb<=100;
+sc<=100;
+sd<=100;
+ae<=70;
+af<=30;
+ag<=20;
+be<=50;
+bf<=40;
+bg<=10;
+cf<=20;
+cg<=40;
+ch<=80;
+df<=20;
+dg<=40;
+dh<=80;
+et<=100;
+ft<=80;
+gt<=90;
+ht<=150;
+sa=ae+af+ag;
+sb=be+bf+bg;
+sc=cf+cg+ch;
+sd=df+dg+dh;
+ae+be=et;
+af+bf+cf+df=ft;
+ag+bg+cg+dg=gt;
+ch+dh=ht;
+
+int sa,sb,sc,sd,ae,af,ag,be,bf,bg,cf,cg,ch,df,dg,dh,et,ft,gt,ht;
+
+/* zad_2
+min: 120sa+100sb+100sc+100sd+70ae+30af+20ag+50be+40bf+10bg+20cf+40cg+80ch+
+     20df+40dg+80dh+100et+80ft+90gt+150ht;
+
+sa=ae+af+ag;
+sb=be+bf+bg;
+sc=cf+cg+ch;
+sd=df+dg+dh;
+ae+be=et;
+af+bf+cf+df=ft;
+ag+bg+cg+dg=gt;
+ch+dh=ht;
+
+sa+sb+sc+sd=1;
+
+bin sa,sb,sc,sd,ae,af,ag,be,bf,bg,cf,cg,ch,df,dg,dh,et,ft,gt,ht;
+
+/* zad_3a *
+min: 2x12+1x61+4x41+3x52+1x72+1x35+3x36+2x34+4x37+4x56+3x74+2x57;
+
+x61+x41-x12=0;
+x12+x52+x72=4;
+-x35-x36-x34-x37=-10;
+-x41+x34+x74=8;
+x35-x56-x52-x57=-14;
+x56+x36-x61=8;
+x57-x72-x74+x37=4;
+
+/* zad_3b *
+min: 2x12+1x61+4x41+3x52+1x72+1x35+3x36+2x34+4x37+4x56+3x74+2x57;
+
+x61+x41-x12=0;
+x21+x52+x72=4;
+-x35-x36-x34-x37=-10;
+-x41+x34+x74=8;
+x35-x56-x52-x57=-14;
+x56+x36-x61=8;
+x57-x72-x74+x37=4;
+x12<=5;
+x61<=5;
+x41<=5;
+x52<=5;
+x72<=5;
+x35<=5;
+x36<=5;
+x34<=5;
+x37<=5;
+x54<=5;
+x74<=5;
+x57<=5;
+
+
+/* zad_5 *
+max: FM + PM;
+
+WF <= 8;
+WL <= 6;
+WP <= 3;
+LF <= 8;
+LP <= 4;
+FP <= 2;
+PF <= 4;
+FM <= 4;
+PM <= 10;
+LF + LP = WL;
+FP + FM = WF + LF;
+PF + PM = WP + LP + FP;
+
+
+
+
